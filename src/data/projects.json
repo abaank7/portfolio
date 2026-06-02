@@ -1,0 +1,27 @@
+{
+    "projects":[
+        {
+        "id":1,
+        "title":"Portfolio Website",
+        "description": "This Project showcases my projects",
+        "tech":["HTML","CSS","JavaScript"],
+        "link":""
+    },
+
+    {
+        "id":2,
+        "title":"Healthcare Platform",
+        "description":"Designed and Implemented a platform for Healthcare Officials",
+        "tech":["Flutter","Firebase","PostgreSql"],
+        "link":""
+    },
+    {
+        "id":3,
+        "title":"Automated Recognition and Evaluation of Mathematical Expressions",
+        "description":"Implemented OCR and Deep Learning to recognize and evaluate expressions written by hand",
+        "tech":["Python","PyTorch","OpenCV","PIL"],
+        "link":""
+    }
+
+    ]
+}

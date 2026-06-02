@@ -1,122 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import NavBar from "./components/NavBar"; 
+import Hero from "./components/Hero";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    // 1. Better typography (antialiased) and consistent background colors matching the Hero component
+    <main className="relative w-full min-h-screen text-slate-900 bg-slate-50 dark:bg-slate-950 dark:text-slate-50 antialiased selection:bg-teal-500/30">
+      
+      {/* The Navigation Bar */}
+      <NavBar />
 
-      <div className="ticks"></div>
+      {/* Section 1: Home (The Hero component handles the #home ID) */}
+      <Hero />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      {/* Section 2: Projects */}
+      <section id="projects" className="min-h-screen flex items-center justify-center border-b border-slate-200 dark:border-slate-800/50 pt-20">
+        <div className="max-w-7xl mx-auto px-6 w-full text-center">
+          <h2 className="text-4xl font-bold mb-12">My Selected Works</h2>
+          
+          {/* Added a placeholder grid to help you visualize where your projects will go */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="h-64 rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-400">Project 1</div>
+            <div className="h-64 rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-400">Project 2</div>
+            <div className="h-64 rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-400">Project 3</div>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Section 3: Experience */}
+      <section id="experience" className="min-h-screen flex items-center justify-center border-b border-slate-200 dark:border-slate-800/50 pt-20">
+        <div className="max-w-3xl mx-auto px-6 w-full text-center">
+          <h2 className="text-4xl font-bold mb-8">Where I've Worked</h2>
+          <p className="text-slate-500 dark:text-slate-400">Your experience timeline will go here.</p>
+        </div>
+      </section>
+
+      {/* Section 4: About */}
+      <section id="about" className="min-h-screen flex items-center justify-center border-b border-slate-200 dark:border-slate-800/50 pt-20">
+        <div className="max-w-3xl mx-auto px-6 w-full text-center">
+          <h2 className="text-4xl font-bold mb-8">About Me</h2>
+          <p className="text-slate-500 dark:text-slate-400">A brief summary of your background, skills, and goals.</p>
+        </div>
+      </section>
+
+      {/* Section 5: Contact me */}
+      <section id="contact" className="min-h-[80vh] flex items-center justify-center pt-20" >
+        <div className="max-w-3xl mx-auto px-6 w-full text-center">
+          <h2 className="text-4xl font-bold mb-8">Let's Connect</h2>
+          <p className="text-slate-500 dark:text-slate-400 mb-8">Feel free to reach out for collaborations or just a friendly hello.</p>
+        </div>
+      </section>
+
+      {/* Optional: A simple footer rounds out the page beautifully */}
+      <footer className="w-full py-8 text-center text-sm text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800/50">
+        <p>© {new Date().getFullYear()} Abaan Koul. All rights reserved.</p>
+      </footer>
+
+    </main>
+  );
 }
-
-export default App
