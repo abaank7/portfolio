@@ -1,50 +1,59 @@
-import React from "react";
 
-function Hero() {
+
+export default function Hero() {
   return (
-    <section id="home" className="min-h-[85vh] flex items-center justify-center px-6">
-      <div className="max-w-4xl mx-auto text-center space-y-6">
-        
-        {/* Subtle Status Badge */}
-        <div className="inline-flex items-center gap-2 bg-teal-100 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20 rounded-full px-4 py-1.5 text-xs font-mono font-medium text-teal-800 dark:text-teal-400 tracking-wide uppercase animate-pulse">
-          <span className="w-2 h-2 rounded-full bg-teal-500 dark:bg-teal-400" aria-hidden="true"></span>
-          Available for Opportunities
-        </div>
+    <section
+      id="home"
+      className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 pb-10 relative z-10"
+    >
+     <br />
 
-        {/* Main Heading with Gradient Text */}
-        <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-gray-900 dark:text-white leading-none">
-          Hi, I'm <span className="bg-gradient-to-r from-teal-500 via-emerald-500 to-cyan-500 dark:from-teal-400 dark:via-emerald-400 dark:to-cyan-400 bg-clip-text text-transparent">Abaan Koul</span>
-        </h1>
-        
-        <h2 className="text-2xl sm:text-4xl font-bold text-gray-700 dark:text-slate-300">
-          Data Scientist & Full-Stack Developer
-        </h2>
+      {/* Main Headline */}
+      <h1 className="section-title max-w-6xl leading-tight mb-8">
+        BUILDING <span className="font-bold text-[#00e5ff]">AUTONOMOUS</span>
+        <br className="hidden sm:block" /> SYSTEMS & INTELLIGENCE
+      </h1>
 
-        {/* Subtext / Hook */}
-        <p className="text-base sm:text-lg text-gray-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
-          I bridge the gap between complex data analysis and elegant web solutions. Specializing in predictive modeling, interactive dashboards, and scalable architectures.
+      {/* Technical Data Panel (Upgraded to Professional Engineering Terminology) */}
+      <div className="hud-panel mb-12 max-w-3xl w-full text-sm sm:text-base leading-loose">
+        <p>
+          <span className="text-white mr-2">{">"}</span>
+          <span className="opacity-70">DESIGNATION:</span> FULL-STACK SOFTWARE & AI ENGINEER
         </p>
-
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <a
-            href="#projects"
-            className="w-full sm:w-auto bg-teal-500 hover:bg-teal-400 text-white dark:text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-teal-500/20 dark:shadow-teal-500/10 transition-all duration-200 transform hover:-translate-y-0.5 text-center focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
-          >
-            View My Projects
-          </a>
-          
-          <a
-            href="#contact"
-            className="w-full sm:w-auto bg-gray-100 dark:bg-slate-800/50 hover:bg-gray-200 dark:hover:bg-slate-800 border border-gray-200 dark:border-slate-700/60 hover:border-gray-300 dark:hover:border-slate-600 text-gray-800 dark:text-slate-200 font-semibold px-8 py-3.5 rounded-xl transition-all duration-200 text-center focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
-          >
-            Let's Talk
-          </a>
-        </div>
-
+        <p>
+          <span className="text-white mr-2">{">"}</span>
+          <span className="opacity-70">CORE_ARCHITECTURE:</span> SCALABLE WEB INFRASTRUCTURE & MACHINE LEARNING PIPELINES
+        </p>
+        <p>
+          <span className="text-white mr-2">{">"}</span>
+          <span className="opacity-70">INTEGRATION_STACK:</span> REACT, DJANGO, POSTGRESQL, PYTORCH, ROS, C++
+        </p>
+        <p className="animate-pulse mt-2 text-[#00e5ff] font-semibold">
+          <span className="text-white mr-2">{">"}</span>
+          SYS_STATUS: OPTIMIZING FOR NEW OPPORTUNITIES
+        </p>
       </div>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+        <a
+          href="#projects"
+          className="group relative px-8 py-4 bg-[#00e5ff]/5 border border-[#00e5ff]/50 text-white font-mono tracking-widest uppercase transition-all duration-300 hover:bg-[#00e5ff]/20 shadow-[inset_0_0_15px_rgba(0,229,255,0.1)] hover:shadow-[inset_0_0_20px_rgba(0,229,255,0.4),0_0_15px_rgba(0,229,255,0.2)]"
+        >
+          <span className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#00e5ff] group-hover:w-3 group-hover:h-3 transition-all" />
+          <span className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#00e5ff] group-hover:w-3 group-hover:h-3 transition-all" />
+          [ VIEW_PROJECTS ]
+        </a>
+
+        <a
+          href="#contact"
+          className="group px-8 py-4 bg-transparent border border-[#00e5ff]/30 text-[#00e5ff] font-mono tracking-widest uppercase transition-all duration-300 hover:bg-[#00e5ff]/10 hover:border-[#00e5ff]"
+        >
+          [ INITIATE_CONTACT ]
+        </a>
+      </div>
+
+     
     </section>
   );
 }
-
-export default Hero;

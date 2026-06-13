@@ -1,57 +1,46 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-function NavBar() {
-    // 1. State to track which section is currently active on screen
+export default function NavBar() {
     const [activeSection, setActiveSection] = useState("home");
-    const navLinks = ["Home", "Projects", "Experience", "About", "Contact"];
+    const navLinks = ["Home", "About", "Skills", "Projects", "Experience", "Contact"];
 
-    // 2. Set up the IntersectionObserver for the scrollspy effect
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
+                    if (entry.isIntersecting) setActiveSection(entry.target.id);
                 });
             },
-            { threshold: 0.5 } // Triggers when 50% of the section is visible
+            { rootMargin: "-100px 0px -60% 0px", threshold: 0 }
         );
 
-        // Target all section tags on the page
-        const sections = document.querySelectorAll("section");
-        sections.forEach((section) => observer.observe(section));
+        navLinks.forEach((link) => {
+            const element = document.getElementById(link.toLowerCase());
+            if (element) observer.observe(element);
+        });
 
         return () => observer.disconnect();
-    }, []);
+    }, [navLinks]);
 
     return (
-        // Changed "absolute" to "fixed" to keep it pinned to the top
-        <nav className="w-full fixed top-0 left-0 z-50 p-8">
-            <ul className="flex justify-end items-center gap-10 max-w-7xl mx-auto">
+        <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+            <ul className="flex items-center gap-2 p-2 rounded-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-xl">
                 {navLinks.map((link) => {
                     const sectionId = link.toLowerCase();
                     const isActive = activeSection === sectionId;
 
                     return (
-                        <li key={link} className="group relative">
+                        <li key={link}>
                             <a
                                 href={`#${sectionId}`}
-                                className={`text-base font-semibold transition-colors duration-300 ${
+                                className={`block px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                                     isActive
-                                        ? "text-gray-900 dark:text-white" // Active text style
-                                        : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" // Inactive text style
+                                        ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-md"
+                                        : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
                                 }`}
                             >
                                 {link}
                             </a>
-                            
-                            {/* Animated Underline */}
-                            <span
-                                className={`absolute -bottom-1 left-0 h-0.5 bg-blue-500 dark:bg-white transition-all duration-300 group-hover:w-full ${
-                                    isActive ? "w-full" : "w-0" // Keeps the line full-width if active
-                                }`}
-                            ></span>
                         </li>
                     );
                 })}
@@ -59,5 +48,3 @@ function NavBar() {
         </nav>
     );
 }
-
-export default NavBar;

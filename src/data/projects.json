@@ -1,27 +1,14 @@
-{
-    "projects":[
-        {
-        "id":1,
-        "title":"Portfolio Website",
-        "description": "This Project showcases my projects",
-        "tech":["HTML","CSS","JavaScript"],
-        "link":""
-    },
-
-    {
-        "id":2,
-        "title":"Healthcare Platform",
-        "description":"Designed and Implemented a platform for Healthcare Officials",
-        "tech":["Flutter","Firebase","PostgreSql"],
-        "link":""
-    },
-    {
-        "id":3,
-        "title":"Automated Recognition and Evaluation of Mathematical Expressions",
-        "description":"Implemented OCR and Deep Learning to recognize and evaluate expressions written by hand",
-        "tech":["Python","PyTorch","OpenCV","PIL"],
-        "link":""
-    }
-
-    ]
-}
+[
+  {
+    "title": "Automated Recognition and Evaluation of Mathematical Expressions",
+    "description": "Implemented OCR and Deep Learning to recognize and evaluate expressions written by hand",
+    "tags": ["Python", "PyTorch", "OpenCV", "PIL"],
+    "link": "https://github.com/abaank7/CNN-Math-Equation-Solver"
+  },
+  {
+    "title": "Skill Filtered Job Scraper (TimesJobs)",
+    "description": "Designed and Implemented a pipeline that continuously scrapes job listings for 'Python'",
+    "tags": ["Python", "BeautifulSoup", "requests"],
+    "link": "https://github.com/abaank7/Skill-Filtered-Job-Scraper"
+  }
+]

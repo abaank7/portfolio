@@ -1,6 +1,93 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
+* {
+  font-family: 'Fira Code', monospace !important;
+}
 
-body{
-    background-color: white
+.page-wrapper {
+  background-color: #010a15;
+  background-image: 
+    linear-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+  @apply text-[#00e5ff] min-h-screen relative;
+  text-shadow: 0px 0px 2px rgba(0, 229, 255, 0.4);
+}
+
+.portfolio-section {
+  @apply min-h-screen flex items-center justify-center pt-20 pb-20 relative;
+}
+
+.portfolio-section::after {
+  content: '';
+  @apply absolute bottom-0 left-[10%] w-[80%] h-[1px] bg-[#00e5ff]/30;
+}
+
+/* 
+  1. ADDED LEFT ALIGNMENT OVERRIDES TO WRAPPERS 
+  This forces all content inside your sections to snap to the left edge of the grid 
+*/
+.section-content-wide {
+  @apply max-w-7xl mx-auto px-6 w-full flex flex-col items-start justify-center text-left;
+}
+
+.section-content-narrow {
+  @apply max-w-3xl mx-auto px-6 w-full flex flex-col items-start justify-center text-left;
+}
+
+/* 2. FORCED LEFT ALIGNMENT ON TITLES */
+.section-title {
+  @apply text-5xl sm:text-7xl font-light mb-8 uppercase tracking-[0.1em] text-left w-full block;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+/* Added a technical prefix '>>' directly via CSS to make every title look like a terminal prompt! */
+.section-title::before {
+  content: '>> ';
+  @apply text-[#00e5ff] opacity-80;
+}
+
+.section-subtitle {
+  @apply text-lg mb-8 leading-relaxed bg-[#00e5ff]/10 px-6 py-3 border-l-[6px] border-[#00e5ff] backdrop-blur-sm text-left w-full block;
+}
+
+/* Added for consistent HUD panels like the one in your Hero section */
+.hud-panel {
+  @apply bg-[#00e5ff]/5 border border-[#00e5ff]/20 border-l-[4px] border-[#00e5ff] backdrop-blur-md px-6 py-6 text-left text-[#b8f7ff] w-full;
+  box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.05);
+}
+
+.project-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full mt-8;
+}
+
+.project-card {
+  @apply h-48 bg-[#010a15]/80 flex items-center justify-center text-[#00e5ff] font-medium text-xl uppercase transition-all duration-300 cursor-pointer relative;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  /* Corner bracket styling */
+  background: 
+    linear-gradient(to right, #00e5ff 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, #00e5ff 2px, transparent 2px) 0 0,
+    linear-gradient(to left, #00e5ff 2px, transparent 2px) 100% 0,
+    linear-gradient(to bottom, #00e5ff 2px, transparent 2px) 100% 0,
+    linear-gradient(to right, #00e5ff 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, #00e5ff 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, #00e5ff 2px, transparent 2px) 100% 100%,
+    linear-gradient(to top, #00e5ff 2px, transparent 2px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+}
+
+.project-card:hover {
+  @apply text-white bg-[#00e5ff]/20;
+  border: 1px solid rgba(0, 229, 255, 0.6);
+  background-size: 25px 25px;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2) inset;
+}
+
+.page-footer {
+  @apply w-full py-6 text-center text-[10px] tracking-[0.4em] text-[#00e5ff] bg-[#010a15] mt-auto uppercase border-t border-[#00e5ff]/20;
 }
