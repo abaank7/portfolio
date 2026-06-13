@@ -1,23 +1,38 @@
-
+import React from "react";
 
 export default function About() {
   return (
     <section id="about" className="portfolio-section">
-      {/* Constrained width for optimal reading experience */}
-      <div className="max-w-3xl mx-auto px-6 w-full text-center">
+      
+      {/* Uses the global alignment wrapper we added to App.css */}
+      <div className="section-content-narrow">
         
-        <h2 className="section-title mb-12">About Me</h2>
+        {/* Uses the global section-title for the neon glow and >> prefix */}
+        <h2 className="section-title mb-12">ABOUT_THE_ENGINEER</h2>
         
-        <div className="space-y-6 text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed text-left sm:text-center">
+        {/* Uses the hud-panel class to match the technical readout box from the Hero section */}
+        <div className="hud-panel space-y-6 text-sm sm:text-base leading-loose font-mono">
+          
           <p>
-            Hello! I'm <span className="font-semibold text-teal-600 dark:text-teal-400">Abaan Koul</span>, a final-year Computer Science & Engineering student, Full-Stack Developer, and AI enthusiast.
+            <span className="text-white mr-2">{">"}</span>
+            I am <span className="text-white font-bold">Abaan Koul</span>, a Full-Stack Software and AI Engineer in my final year of Computer Science & Engineering. I specialize in bridging the gap between scalable backend architectures and intelligent, autonomous systems.
           </p>
+          
           <p>
-            My journey started with a strong foundation in Data Structures and Algorithms through competitive programming in C++. Since then, I have had the privilege of training at IIT Bombay, building autonomous robotics for the e-Yantra competition, and developing full-scale software like healthcare ERPs.
+            <span className="text-white mr-2">{">"}</span>
+            My engineering foundation was forged in C++ through rigorous Data Structures and Algorithms. This computational baseline quickly scaled into complex, real-world architectures—from developing autonomous robotics protocols during my training at IIT Bombay (e-Yantra), to engineering secure, full-scale healthcare ERP platforms.
           </p>
+          
           <p>
-            Whether I'm architecting local RAG engines, building cross-platform apps with Flutter, or crafting robust Django backends, my goal is always to write clean, scalable code and learn in public. When I'm not at my keyboard, you can usually find me on the football pitch or analyzing strategies on the chess board.
+            <span className="text-white mr-2">{">"}</span>
+            Currently, my technical focus lies in deploying localized RAG (Retrieval-Augmented Generation) engines, building reactive cross-platform applications with Flutter, and architecting robust Python/Django backends. 
           </p>
+
+          <p className="opacity-70 mt-4 border-t border-[#00e5ff]/20 pt-4">
+            <span className="text-[#00e5ff] mr-2">{"//"}</span>
+            OFFLINE_STATUS: When uncoupled from the terminal, I optimize strategic thinking on the chess board and maintain momentum on the football pitch.
+          </p>
+          
         </div>
 
       </div>

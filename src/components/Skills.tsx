@@ -1,9 +1,9 @@
 
 export default function Skills() {
   const skills = {
-    "Languages": ["C++", "Python", "JavaScript", "Dart", "SQL", "HTML/CSS"],
-    "AI & Data": ["PyTorch", "Transformers", "CNNs", "Machine Learning", "Pandas", "NumPy", "OpenCV"],
-    "Web & Tools": ["Django", "React", "Flutter", "PostgreSQL", "ROS", "Git", "Linux"]
+    "Languages": ["C++", "Python", "JavaScript", "SQL", "HTML/CSS"],
+    "AI & Data": ["PyTorch", "Transformers", "CNNs", "sci-kit learn", "Pandas", "NumPy", "OpenCV","Matplotlib","Seaborn"],
+    "Web & Tools": ["Django","PostgreSQL", "React","Flutter","Git", "Linux"]
   };
 
   return (
