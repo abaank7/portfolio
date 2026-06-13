@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
 * {
   font-family: 'Fira Code', monospace !important;
@@ -36,7 +36,7 @@
 
 /* Scaled down base font size for mobile (text-3xl) and scaled up for desktop (md:text-7xl) */
 .section-title {
-  @apply text-3xl sm:text-5xl md:text-7xl font-light mb-6 sm:mb-8 uppercase tracking-wide sm:tracking-widest text-left w-full block bwrap-break-word
+  @apply text-3xl sm:text-5xl md:text-7xl font-light mb-6 sm:mb-8 uppercase tracking-wide sm:tracking-widest text-left w-full block wrap-break-word;
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
 }
@@ -63,15 +63,21 @@
 .project-card {
   @apply h-48 bg-[#010a15]/80 flex items-center justify-center text-[#00e5ff] font-medium text-lg sm:text-xl uppercase transition-all duration-300 cursor-pointer relative;
   border: 1px solid rgba(0, 229, 255, 0.2);
-  background: 
-    linear-gradient(to right, #00e5ff 2px, transparent 2px) 0 0,
-    linear-gradient(to bottom, #00e5ff 2px, transparent 2px) 0 0,
-    linear-gradient(to left, #00e5ff 2px, transparent 2px) 100% 0,
-    linear-gradient(to bottom, #00e5ff 2px, transparent 2px) 100% 0,
-    linear-gradient(to right, #00e5ff 2px, transparent 2px) 0 100%,
-    linear-gradient(to top, #00e5ff 2px, transparent 2px) 0 100%,
-    linear-gradient(to left, #00e5ff 2px, transparent 2px) 100% 100%,
-    linear-gradient(to top, #00e5ff 2px, transparent 2px) 100% 100%;
+  /* Changed to background-image so it doesn't overwrite the bg opacity utility */
+  background-image: 
+    linear-gradient(to right, #00e5ff 2px, transparent 2px),
+    linear-gradient(to bottom, #00e5ff 2px, transparent 2px),
+    linear-gradient(to left, #00e5ff 2px, transparent 2px),
+    linear-gradient(to bottom, #00e5ff 2px, transparent 2px),
+    linear-gradient(to right, #00e5ff 2px, transparent 2px),
+    linear-gradient(to top, #00e5ff 2px, transparent 2px),
+    linear-gradient(to left, #00e5ff 2px, transparent 2px),
+    linear-gradient(to top, #00e5ff 2px, transparent 2px);
+  background-position: 
+    0 0, 0 0, 
+    100% 0, 100% 0, 
+    0 100%, 0 100%, 
+    100% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-size: 15px 15px;
 }

@@ -4,20 +4,20 @@
     "role": "Software Foundation Course Intern",
     "company": "IIT Bombay",
     "duration": "Jun 2024",
-    "logo": "public/images/IIT_logo.png",
+    "logo": "/images/IIT_logo.png",
     "tech": ["Python", "Regex", "Web Scraping", "Linux"],
     "description": [
       "Completed intensive training in programming fundamentals, problem-solving, and software development practices.",
       "Worked on hands-on programming assignments covering algorithms, data structures, and object-oriented programming concepts.",
       "Strengthened software engineering skills through practical implementation and project-based learning."
     ],
-    "image": "public/images/Abaan_1.jpg"
+    "image": "/images/Abaan_1.jpg"
   },
   {
     "role": "Machine Learning Intern",
     "company": "NIT Srinagar",
     "duration": "Jan 2025",
-    "logo": "public/images/nit_logo.jpg",
+    "logo": "/images/nit_logo.jpg",
     "tech": ["Python", "Sci-Kit Learn", "Numpy", "Pandas", "Matplotlib"],
     "description": [
       "Explored machine learning workflows including data preprocessing, feature engineering, model training, and evaluation.",
@@ -29,13 +29,13 @@
     "role": "Robotics Developer (Competitor)",
     "company": "e-Yantra Robotics Competition",
     "duration": "Sep 2025 - Dec 2025",
-    "logo": "public/images/eyantra_logo.png",
+    "logo": "/images/eyantra_logo.png",
     "tech": ["Python", "Gazebo", "Coppealism Simulator"],
     "description": [
       "Developed an autonomous self-balancing robot using ROS, control theory, and sensor feedback systems.",
       "Implemented navigation and task-execution logic in C++ and tested robot behavior through simulation environments.",
       "Collaborated in a competitive robotics team to design, integrate, and optimize software components for real-time performance."
     ],
-    "image":"public/images/robotics_comp.png"
+    "image":"/images/robotics_comp.png"
   }
 ]
