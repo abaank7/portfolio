@@ -7,7 +7,7 @@ export default function About() {
       <div className="section-content-narrow">
         
         {/* Uses the global section-title for the neon glow and >> prefix */}
-        <h2 className="section-title mb-12">ABOUT_THE_ENGINEER</h2>
+        <h2 className="section-title mb-12">ABOUT ME</h2>
         
         {/* Uses the hud-panel class to match the technical readout box from the Hero section */}
         <div className="hud-panel space-y-6 text-sm sm:text-base leading-loose font-mono">
