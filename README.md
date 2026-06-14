@@ -2,6 +2,7 @@
 
 A highly interactive, performance-optimized personal portfolio built with React, TypeScript, and Vite. Designed with a custom **Autonomous ROS HUD** aesthetic to reflect my focus on bridging scalable full-stack web architecture with intelligent, autonomous machine learning systems.
 
+🔗 **[View Live Site](https://abaan-portfolio-dusky.vercel.app/)** 
 
 ## ⚡ Features
 
@@ -18,18 +19,21 @@ A highly interactive, performance-optimized personal portfolio built with React,
 * **Language:** TypeScript
 * **Styling:** Tailwind CSS (v4)
 * **Typography:** Google Fonts (Fira Code)
-* **Deployment:** Vercel / Netlify *(Update based on your host)*
+* **Deployment:** Vercel
 
 ## 🚀 Getting Started
 
 To run this project locally, follow these steps:
 
 ### Prerequisites
-Make sure you have Node.js (v18 or higher) installed on your machine.
+Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on your machine.
 
 ### Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/abaank7/portfolio.git](https://github.com/abaank7/portfolio.git)
-   cd portfolio
+Run the following commands in your terminal to clone the repository, install the required dependencies, and boot up the local development server:
+
+```bash
+git clone [https://github.com/abaank7/portfolio.git](https://github.com/abaank7/portfolio.git)
+cd portfolio
+npm install
+npm run dev
