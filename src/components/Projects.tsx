@@ -1,15 +1,13 @@
-
 import ProjectCard from "./ProjectCard";
-import projectsData from "../data/projects.json"; // Adjust path if needed
+import projectsData from "../data/projects.json";
 
 export default function Projects() {
   return (
     <section id="projects" className="portfolio-section">
-      <div className="section-content-wide">
-        <h2 className="section-title">My Projects</h2>
+      <div className="section-content-wide max-w-6xl">
+        <h2 className="section-title">Featured Projects</h2>
         
-        <div className="project-grid">
-          {/* Loop through the JSON data to generate your cards */}
+        <div className="project-grid mt-8">
           {projectsData.map((project, index) => (
             <ProjectCard 
               key={index}

@@ -1,5 +1,3 @@
-
-
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -9,26 +7,33 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
   return (
-    <div className="group flex flex-col h-full p-6 rounded-lg bg-gray-950 border border-gray-800 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300 relative overflow-hidden">
-      {/* Decorative Top Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div className="group flex flex-col h-full p-8 rounded-4xl bg-[#101012] border border-white/10 hover:border-pink-500/30 hover:bg-[#151518] transition-all duration-300 relative overflow-hidden shadow-xl hover:shadow-[0_10px_30px_-15px_rgba(236,72,153,0.2)]">
       
-      <h3 className="text-xl font-mono font-bold text-gray-100 mb-3">
-        <span className="text-cyan-400 mr-2">{'>'}</span>{title}
+      <h3 className="text-xl font-bold text-zinc-100 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-pink-500 group-hover:to-violet-500 transition-all">
+        {title}
       </h3>
-      <p className="text-gray-400 text-sm font-mono leading-relaxed mb-6 grow">
+      
+      <p className="text-zinc-400 text-sm leading-relaxed mb-6 grow">
         {description}
       </p>
+      
       <div className="flex flex-wrap gap-2 mb-6">
         {tags.map((tag, index) => (
-          <span key={index} className="px-2 py-1 text-[10px] font-mono tracking-widest uppercase border border-gray-700 text-cyan-400 bg-cyan-400/10">
+          <span key={index} className="px-3 py-1 text-[11px] font-medium rounded-full border border-white/10 text-zinc-300 bg-white/5">
             {tag}
           </span>
         ))}
       </div>
+
       {link && (
-        <a href={link} target="_blank" rel="noreferrer" className="mt-auto text-sm font-mono text-cyan-400 hover:text-cyan-300 hover:underline underline-offset-4 decoration-dashed">
-          [ VIEW PROJECT ]
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noreferrer" 
+          className="mt-auto text-sm font-medium text-zinc-300 hover:text-white flex items-center gap-2 w-fit transition-colors"
+        >
+          View Project 
+          <span className="group-hover:translate-x-1 transition-transform">→</span>
         </a>
       )}
     </div>

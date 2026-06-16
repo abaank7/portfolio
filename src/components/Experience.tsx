@@ -1,4 +1,3 @@
-
 import ExperienceCard from "./ExperienceCard";
 import experienceData from "../data/experience.json"; 
 
@@ -8,8 +7,7 @@ export default function Experience() {
       <div className="section-content-narrow">
         <h2 className="section-title">Experience</h2>
         
-        <div className="w-full text-left mt-8">
-          {/* Loop through the JSON data */}
+        <div className="w-full text-left mt-12">
           {experienceData.map((item, index) => (
             <ExperienceCard 
               key={index}
@@ -19,7 +17,7 @@ export default function Experience() {
               duration={item.duration}
               description={item.description}
               image={item.image} 
-              logo={item.logo} // Added the logo prop here!
+              logo={item.logo}
             />
           ))}
         </div>

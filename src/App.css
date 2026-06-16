@@ -1,94 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-* {
-  font-family: 'Fira Code', monospace !important;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #050505;
 }
 
+/* The main wrapper with subtle ambient SaaS lighting */
 .page-wrapper {
-  background-color: #010a15;
   background-image: 
-    linear-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: center center;
-  /* ADDED overflow-x-hidden to prevent mobile side-scrolling */
-  @apply text-[#00e5ff] min-h-screen relative overflow-x-hidden w-full;
-  text-shadow: 0px 0px 2px rgba(0, 229, 255, 0.4);
+    radial-gradient(circle at 15% 0%, rgba(236, 72, 153, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(139, 92, 246, 0.05), transparent 40%);
+  @apply text-zinc-400 min-h-screen relative overflow-x-hidden w-full selection:bg-pink-500/30 selection:text-pink-100;
 }
 
+/* Layout structural classes */
 .portfolio-section {
-  @apply min-h-screen flex items-center justify-center pt-24 pb-20 relative px-4 sm:px-6;
-}
-
-.portfolio-section::after {
-  content: '';
-  @apply absolute bottom-0 left-[10%] w-[80%] h-px bg-[#00e5ff]/30;
+  @apply min-h-screen flex flex-col items-center justify-center pt-24 pb-20 relative px-4 sm:px-6;
 }
 
 .section-content-wide {
-  @apply max-w-7xl mx-auto w-full flex flex-col items-start justify-center text-left;
+  @apply max-w-7xl mx-auto w-full flex flex-col items-center justify-center text-center;
 }
 
 .section-content-narrow {
-  @apply max-w-3xl mx-auto w-full flex flex-col items-start justify-center text-left;
+  @apply max-w-3xl mx-auto w-full flex flex-col items-center justify-center text-center;
 }
 
-/* Scaled down base font size for mobile (text-3xl) and scaled up for desktop (md:text-7xl) */
+/* Global Typography */
 .section-title {
-  @apply text-3xl sm:text-5xl md:text-7xl font-light mb-6 sm:mb-8 uppercase tracking-wide sm:tracking-widest text-left w-full block wrap-break-word;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+  @apply text-4xl sm:text-5xl md:text-6xl font-bold mb-10 sm:mb-14 tracking-tight text-center w-full block wrap-break-word text-white;
 }
 
-.section-title::before {
-  content: '>> ';
-  @apply text-[#00e5ff] opacity-80;
-}
-
-.section-subtitle {
-  @apply text-sm sm:text-lg mb-6 sm:mb-8 leading-relaxed bg-[#00e5ff]/10 px-4 sm:px-6 py-3 border-l-4 border-[#00e5ff] backdrop-blur-sm text-left w-full block;
-}
-
-/* Reduced padding on mobile (px-4 py-4) to maximize screen space */
-.hud-panel {
-  @apply bg-[#00e5ff]/5 border border-l-4 border-[#00e5ff] backdrop-blur-md px-4 sm:px-6 py-4 sm:py-6 text-left text-[#b8f7ff] w-full wrap-break-word;
-  box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.05);
-}
-
+/* Grid systems */
 .project-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-6 sm:mt-8;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full;
 }
 
-.project-card {
-  @apply h-48 bg-[#010a15]/80 flex items-center justify-center text-[#00e5ff] font-medium text-lg sm:text-xl uppercase transition-all duration-300 cursor-pointer relative;
-  border: 1px solid rgba(0, 229, 255, 0.2);
-  /* Changed to background-image so it doesn't overwrite the bg opacity utility */
-  background-image: 
-    linear-gradient(to right, #00e5ff 2px, transparent 2px),
-    linear-gradient(to bottom, #00e5ff 2px, transparent 2px),
-    linear-gradient(to left, #00e5ff 2px, transparent 2px),
-    linear-gradient(to bottom, #00e5ff 2px, transparent 2px),
-    linear-gradient(to right, #00e5ff 2px, transparent 2px),
-    linear-gradient(to top, #00e5ff 2px, transparent 2px),
-    linear-gradient(to left, #00e5ff 2px, transparent 2px),
-    linear-gradient(to top, #00e5ff 2px, transparent 2px);
-  background-position: 
-    0 0, 0 0, 
-    100% 0, 100% 0, 
-    0 100%, 0 100%, 
-    100% 100%, 100% 100%;
-  background-repeat: no-repeat;
-  background-size: 15px 15px;
-}
-
-.project-card:hover {
-  @apply text-white bg-[#00e5ff]/20;
-  border: 1px solid rgba(0, 229, 255, 0.6);
-  background-size: 25px 25px;
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2) inset;
-}
-
+/* Footer */
 .page-footer {
-  @apply w-full py-6 text-center text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.4em] text-[#00e5ff] bg-[#010a15] mt-auto uppercase border-t border-[#00e5ff]/20 px-4;
+  @apply w-full py-8 text-center text-sm text-zinc-600 bg-transparent mt-auto border-t border-white/5;
 }
